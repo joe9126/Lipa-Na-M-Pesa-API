@@ -31,4 +31,6 @@ This is a Node.js Express API that integrates with Safaricom's Lipa Na MPESA STK
 ```bash
 git clone https://github.com/joe9126/lipa_na_mpesa_api.git
 cd mpesa-stk-api
+npm install
+npm run serve
 ```
