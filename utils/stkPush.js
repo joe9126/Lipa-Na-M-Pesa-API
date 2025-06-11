@@ -31,7 +31,7 @@ const stkPush = async function (
     AccountReference: accountReference,
     TransactionDesc: transactionDesc,
   };
-  // console.log("payload", payload);
+  console.log("payload", payload);
 
   const url = `${process.env.STK_PUSH_URL}`;
 
@@ -43,8 +43,8 @@ const stkPush = async function (
     });
     return response.data;
   } catch (error) {
-    //  console.error(error.response.data);
-    throw new Error("STK Push Failed");
+    console.error(error.response.data);
+    // throw new Error("STK Push Failed");
   }
 };
 module.exports = stkPush;

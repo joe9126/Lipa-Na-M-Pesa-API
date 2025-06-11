@@ -1,10 +1,15 @@
 const stkPush = require("../utils/stkPush");
 
 exports.stkpushRequest = async (req, res) => {
-  const { phone, amount, reference, description } = req.body;
+  const { phone, amount, accountReference, transactionDesc } = req.body;
 
   try {
-    const result = await stkPush(phone, amount, reference, description);
+    const result = await stkPush(
+      phone,
+      amount,
+      accountReference,
+      transactionDesc
+    );
     res.json(result);
     console.log("callback results:");
     console.log(result);
